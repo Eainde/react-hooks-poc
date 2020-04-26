@@ -9,7 +9,7 @@ If you write a function component and realize you need to add some state to it, 
 useState is used to have state in functinal components. Before react 16.8 we need to have class components in order to have state in a component. But by using useState we can have the state in functional component.
 ##### Why did react add hooks? [click here for answer](https://reactjs.org/docs/hooks-intro.html#motivation)
 
-##useEffect
+## useEffect
 
 The Effect Hook lets you perform side effects in function components:
 import React, { useState, useEffect } from 'react';
