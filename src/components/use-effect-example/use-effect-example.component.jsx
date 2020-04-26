@@ -16,8 +16,10 @@ const UseEffectExample = () => {
     };
 
     fetchFunc();
-  }, [searchQuery]); // this parameter [searchquery] is to let  react know to only fire useEffect when searchQuery state changes else dont fire it.
-
+  }, [searchQuery]);
+  /** this parameter [searchquery] is to let  react know to only fire useEffect when searchQuery state changes else dont fire it.
+   if this array is blank then the use effect is called on the first render after that it would never get called.
+   If we dont pass any array then the useEffect will get called infinitely**/
   return (
     <Card>
       <input
