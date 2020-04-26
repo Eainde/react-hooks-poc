@@ -1,20 +1,32 @@
-## useReducer example
+## What is a Hook? 
+A Hook is a special function that lets you “hook into” React features. For example, useState is a Hook that lets you add React state to function components. We’ll learn other Hooks later.
 
-A small project to help us understand the useReducer hook. We are replacing the code in our useEffect example with useReducer for state management.
+##When would I use a Hook? 
+If you write a function component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing function component. We’re going to do that right now!
 
-# How to fork and clone
+## useState
 
-One quick note about cloning this project. If you wish to make commits and push the code up after cloning this repo, you should fork the project first. In order to own your own copy of this repository, you have to fork it so you get your own copy on your own profile!
+useState is used to have state in functinal components. Before react 16.8 we need to have class components in order to have state in a component. But by using useState we can have the state in functional component.
+##### Why did react add hooks? [click here for answer](https://reactjs.org/docs/hooks-intro.html#motivation)
 
-You can see the fork button in the top right corner of every GitHub project; click it and a copy of the project will be added to your GitHub profile under the same name as the original project.
+##useEffect
 
-![alt text](https://i.ibb.co/1YN7SJ6/Screen-Shot-2019-07-01-at-2-02-40-AM.png "image to fork button")
+The Effect Hook lets you perform side effects in function components:
+import React, { useState, useEffect } from 'react';
 
-After forking the project, simply clone it the way you would from the new forked project in your own GitHub repository and you can commit and push to it freely!
+function Example() {  
+  const [count, setCount] = useState(0);  
 
+  // Similar to componentDidMount and componentDidUpdate:  
+  useEffect(() => {  
+    // Update the document title using the browser API  
+    document.title = `You clicked ${count} times`;  
+  });  
 
-# After you fork and clone:
+  return ();  
+}  
 
-## Install dependencies
+- Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects. Whether or not you’re used to calling these operations “side effects” (or just “effects”), you’ve likely performed them in your components before.
 
-In your terminal after you clone your project down, remember to run either `yarn` or `npm install` to build all the dependencies in the project.
+- Tip : If you’re familiar with React class lifecycle methods, you can think of useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
+

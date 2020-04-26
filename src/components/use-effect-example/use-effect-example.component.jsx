@@ -16,7 +16,7 @@ const UseEffectExample = () => {
     };
 
     fetchFunc();
-  }, [searchQuery]);
+  }, [searchQuery]); // this parameter [searchquery] is to let  react know to only fire useEffect when searchQuery state changes else dont fire it.
 
   return (
     <Card>
